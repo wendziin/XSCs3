@@ -1,0 +1,10 @@
+# classes.dex
+
+.class interface abstract Lio/nn/lpop/u7;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# virtual methods
+.method public abstract a()I
+.end method

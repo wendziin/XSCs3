@@ -1,0 +1,21 @@
+# classes.dex
+
+.class public abstract Lio/nn/lpop/yg0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# direct methods
+.method public static final a(Landroid/view/View;Lio/nn/lpop/R10;)V
+    .registers 3
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lio/nn/lpop/lE;->f(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget v0, Lio/nn/lpop/XW;->a:I
+
+    invoke-virtual {p0, v0, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    return-void
+.end method

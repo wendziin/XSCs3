@@ -1,0 +1,158 @@
+# classes2.dex
+
+.class Lio/nn/lpop/sr$f;
+.super Landroid/widget/Filter;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lio/nn/lpop/sr;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lio/nn/lpop/sr;
+
+
+# direct methods
+.method constructor <init>(Lio/nn/lpop/sr;)V
+    .registers 2
+
+    iput-object p1, p0, Lio/nn/lpop/sr$f;->a:Lio/nn/lpop/sr;
+
+    invoke-direct {p0}, Landroid/widget/Filter;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;
+    .registers 7
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    if-eqz p1, :cond_44
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_e
+
+    goto :goto_44
+
+    :cond_e
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lio/nn/lpop/sr$f;->a:Lio/nn/lpop/sr;
+
+    iget-object v1, v1, Lio/nn/lpop/sr;->e:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_22
+    :goto_22
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4b
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lio/nn/lpop/qr;
+
+    invoke-virtual {v2}, Lio/nn/lpop/qr;->d()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_22
+
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_22
+
+    :cond_44
+    :goto_44
+    iget-object p1, p0, Lio/nn/lpop/sr$f;->a:Lio/nn/lpop/sr;
+
+    iget-object p1, p1, Lio/nn/lpop/sr;->e:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    :cond_4b
+    new-instance p1, Landroid/widget/Filter$FilterResults;
+
+    invoke-direct {p1}, Landroid/widget/Filter$FilterResults;-><init>()V
+
+    iput-object v0, p1, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    iput v0, p1, Landroid/widget/Filter$FilterResults;->count:I
+
+    return-object p1
+.end method
+
+.method protected publishResults(Ljava/lang/CharSequence;Landroid/widget/Filter$FilterResults;)V
+    .registers 3
+
+    iget-object p1, p0, Lio/nn/lpop/sr$f;->a:Lio/nn/lpop/sr;
+
+    iget-object p1, p1, Lio/nn/lpop/sr;->d:Ljava/util/List;
+
+    invoke-interface {p1}, Ljava/util/List;->clear()V
+
+    iget-object p1, p0, Lio/nn/lpop/sr$f;->a:Lio/nn/lpop/sr;
+
+    iget-object p1, p1, Lio/nn/lpop/sr;->d:Ljava/util/List;
+
+    iget-object p2, p2, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
+
+    check-cast p2, Ljava/util/List;
+
+    invoke-interface {p1, p2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    iget-object p1, p0, Lio/nn/lpop/sr$f;->a:Lio/nn/lpop/sr;
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$h;->j()V
+
+    return-void
+.end method

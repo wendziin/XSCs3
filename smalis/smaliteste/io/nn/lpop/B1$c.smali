@@ -1,0 +1,439 @@
+# classes2.dex
+
+.class Lio/nn/lpop/B1$c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lio/nn/lpop/Ca;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lio/nn/lpop/B1;->h2(ILjava/lang/String;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lio/nn/lpop/B1;
+
+
+# direct methods
+.method constructor <init>(Lio/nn/lpop/B1;)V
+    .registers 2
+
+    iput-object p1, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lio/nn/lpop/xa;Ljava/lang/Throwable;)V
+    .registers 4
+
+    iget-object p1, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {p1}, Lio/nn/lpop/B1;->W1(Lio/nn/lpop/B1;)Landroid/widget/ProgressBar;
+
+    move-result-object p1
+
+    const/16 p2, 0x8
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {p1}, Lio/nn/lpop/B1;->V1(Lio/nn/lpop/B1;)Landroid/widget/ProgressBar;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {p1}, Lio/nn/lpop/B1;->U1(Lio/nn/lpop/B1;)I
+
+    move-result p1
+
+    const/4 p2, 0x1
+
+    const/4 v0, 0x0
+
+    if-ne p1, p2, :cond_27
+
+    iget-object p1, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {p1}, Lio/nn/lpop/B1;->N1(Lio/nn/lpop/B1;)Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->setVisibility(I)V
+
+    :cond_27
+    iget-object p1, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {p1, v0}, Lio/nn/lpop/B1;->b2(Lio/nn/lpop/B1;Z)V
+
+    return-void
+.end method
+
+.method public b(Lio/nn/lpop/xa;Lio/nn/lpop/YZ;)V
+    .registers 9
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p2}, Lio/nn/lpop/YZ;->b()I
+
+    move-result v1
+
+    const/16 v2, 0xc8
+
+    if-ne v1, v2, :cond_15f
+
+    invoke-virtual {p2}, Lio/nn/lpop/YZ;->a()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lio/nn/lpop/b00;
+
+    invoke-virtual {v1}, Lio/nn/lpop/b00;->c()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "success"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    if-eqz v1, :cond_137
+
+    sget-object v1, Lcom/tv/visioncine/AppConfig;->d:Ljava/lang/String;
+
+    invoke-virtual {p2}, Lio/nn/lpop/YZ;->a()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lio/nn/lpop/b00;
+
+    invoke-virtual {p2}, Lio/nn/lpop/b00;->a()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v1, p2}, Lio/nn/lpop/D1;->b(Ljava/lang/String;Ljava/lang/String;)Lio/nn/lpop/D1;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lio/nn/lpop/D1;->f()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_47
+
+    new-instance p1, Lio/nn/lpop/Ka0;
+
+    iget-object v0, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->v()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Lio/nn/lpop/Ka0;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {p2}, Lio/nn/lpop/D1;->e()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Lio/nn/lpop/Ka0;->b(Ljava/lang/String;)V
+
+    return-void
+
+    :cond_47
+    new-instance v1, Lio/nn/lpop/mA;
+
+    invoke-direct {v1}, Lio/nn/lpop/mA;-><init>()V
+
+    invoke-virtual {p2}, Lio/nn/lpop/D1;->d()Ljava/lang/String;
+
+    move-result-object p2
+
+    new-array v3, v0, [Ljava/lang/reflect/Type;
+
+    const-class v4, Lio/nn/lpop/rf0;
+
+    aput-object v4, v3, p1
+
+    const-class v4, Ljava/util/ArrayList;
+
+    invoke-static {v4, v3}, Lio/nn/lpop/Sc0;->c(Ljava/lang/reflect/Type;[Ljava/lang/reflect/Type;)Lio/nn/lpop/Sc0;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lio/nn/lpop/Sc0;->f()Ljava/lang/reflect/Type;
+
+    move-result-object v3
+
+    invoke-virtual {v1, p2, v3}, Lio/nn/lpop/mA;->j(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/util/List;
+
+    iget-object v1, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {v1}, Lio/nn/lpop/B1;->W1(Lio/nn/lpop/B1;)Landroid/widget/ProgressBar;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v1, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {v1}, Lio/nn/lpop/B1;->V1(Lio/nn/lpop/B1;)Landroid/widget/ProgressBar;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v1, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {v1}, Lio/nn/lpop/B1;->U1(Lio/nn/lpop/B1;)I
+
+    move-result v1
+
+    if-ne v1, v0, :cond_89
+
+    iget-object v1, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {v1}, Lio/nn/lpop/B1;->X1(Lio/nn/lpop/B1;)Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/View;->requestFocus()Z
+
+    :cond_89
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-nez v1, :cond_a1
+
+    iget-object v1, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {v1}, Lio/nn/lpop/B1;->U1(Lio/nn/lpop/B1;)I
+
+    move-result v1
+
+    if-ne v1, v0, :cond_a1
+
+    iget-object v1, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {v1}, Lio/nn/lpop/B1;->N1(Lio/nn/lpop/B1;)Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->setVisibility(I)V
+
+    goto :goto_aa
+
+    :cond_a1
+    iget-object v1, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {v1}, Lio/nn/lpop/B1;->N1(Lio/nn/lpop/B1;)Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->setVisibility(I)V
+
+    :goto_aa
+    const/4 v1, 0x0
+
+    :goto_ab
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_121
+
+    invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lio/nn/lpop/rf0;
+
+    new-instance v3, Lio/nn/lpop/qd;
+
+    invoke-direct {v3}, Lio/nn/lpop/qd;-><init>()V
+
+    invoke-virtual {v2}, Lio/nn/lpop/rf0;->g()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lio/nn/lpop/qd;->D(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Lio/nn/lpop/rf0;->h()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lio/nn/lpop/qd;->O(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Lio/nn/lpop/rf0;->c()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "1"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_dc
+
+    const-string v4, "tvseries"
+
+    invoke-virtual {v3, v4}, Lio/nn/lpop/qd;->R(Ljava/lang/String;)V
+
+    goto :goto_f3
+
+    :cond_dc
+    invoke-virtual {v2}, Lio/nn/lpop/rf0;->c()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "0"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_ee
+
+    const-string v4, "movie"
+
+    invoke-virtual {v3, v4}, Lio/nn/lpop/qd;->R(Ljava/lang/String;)V
+
+    goto :goto_f3
+
+    :cond_ee
+    const-string v4, "tv"
+
+    invoke-virtual {v3, v4}, Lio/nn/lpop/qd;->R(Ljava/lang/String;)V
+
+    :goto_f3
+    invoke-virtual {v2}, Lio/nn/lpop/rf0;->f()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lio/nn/lpop/qd;->J(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Lio/nn/lpop/rf0;->e()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lio/nn/lpop/qd;->I(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Lio/nn/lpop/rf0;->d()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lio/nn/lpop/qd;->H(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Lio/nn/lpop/rf0;->i()I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Lio/nn/lpop/qd;->P(I)V
+
+    invoke-virtual {v2}, Lio/nn/lpop/rf0;->j()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Lio/nn/lpop/qd;->C(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {v2}, Lio/nn/lpop/B1;->S1(Lio/nn/lpop/B1;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/2addr v1, v0
+
+    goto :goto_ab
+
+    :cond_121
+    iget-object p2, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {p2}, Lio/nn/lpop/B1;->T1(Lio/nn/lpop/B1;)Lio/nn/lpop/od;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$h;->j()V
+
+    iget-object p2, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {p2, p1}, Lio/nn/lpop/B1;->b2(Lio/nn/lpop/B1;Z)V
+
+    iget-object p1, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-static {p1, p2}, Lio/nn/lpop/B1;->a2(Lio/nn/lpop/B1;Ljava/lang/Boolean;)V
+
+    goto :goto_15f
+
+    :cond_137
+    iget-object p2, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {p2}, Lio/nn/lpop/B1;->W1(Lio/nn/lpop/B1;)Landroid/widget/ProgressBar;
+
+    move-result-object p2
+
+    invoke-virtual {p2, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p2, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {p2}, Lio/nn/lpop/B1;->V1(Lio/nn/lpop/B1;)Landroid/widget/ProgressBar;
+
+    move-result-object p2
+
+    invoke-virtual {p2, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p2, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {p2}, Lio/nn/lpop/B1;->U1(Lio/nn/lpop/B1;)I
+
+    move-result p2
+
+    if-ne p2, v0, :cond_15a
+
+    iget-object p2, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {p2}, Lio/nn/lpop/B1;->N1(Lio/nn/lpop/B1;)Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->setVisibility(I)V
+
+    :cond_15a
+    iget-object p2, p0, Lio/nn/lpop/B1$c;->a:Lio/nn/lpop/B1;
+
+    invoke-static {p2, p1}, Lio/nn/lpop/B1;->b2(Lio/nn/lpop/B1;Z)V
+
+    :cond_15f
+    :goto_15f
+    return-void
+.end method
